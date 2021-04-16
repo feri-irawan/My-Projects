@@ -6,7 +6,7 @@
  */
  
 //Default
-echo file_get_contents("projects.json");
+echo json_decode(file_get_contents("projects.json"), JSON_PRETTY_PRINT);
 ?>
 
 
