@@ -26,7 +26,7 @@ if (isset($_GET['character-id'])) {
 
   curl_close($curl);
 
-  echo json_encode($result);
+  var_dump(json_encode($result));
 
  } else {
   echo "Character Id not defined";
