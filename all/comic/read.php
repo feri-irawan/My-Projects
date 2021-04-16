@@ -27,9 +27,9 @@ if (isset($_GET["comic"])) {
   
   <section class="container p-3">
     
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-3">
       <div class="col-md-4 text-center">
-        <img class="rounded" src="<?=$comic->thumb?>">
+        <img class="rounded mb-3" src="<?=$comic->thumb?>">
       </div>
       <div class="col-md-8">
         <ul class="list-group list-group-flush">
@@ -46,7 +46,7 @@ if (isset($_GET["comic"])) {
     </div>
     <div class="row">
       <div class="col-12">
-        <h6>Synopsis</h6>
+        <h5>Synopsis</h5>
         <?=$comic->synopsis?>
       </div>
       <div class="col-12">
