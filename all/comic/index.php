@@ -22,7 +22,7 @@ print_r($manga);
   
   <section class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-3">
         
         <?php foreach ($manga->manga_list as $row): ?>
         <div class="card">
