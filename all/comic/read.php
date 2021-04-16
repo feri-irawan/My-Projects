@@ -33,9 +33,10 @@ if (isset($_GET["chapter"])) {
     <ul class="list-group list-group-flush mb-3">
       <li class="list-group-item"><?=$title?></li>
       <li class="list-group-item"><?=$chapterTitle?></li>
+      <li class="list-group-item"><?=$comic->chapter_page?></li>
     </ul>
     
-    <?php foreach ($comic as $comic): ?>
+    <?php foreach ($comic->chapter_image as $comic): ?>
       <img src="<?=$comic->chapter_image_link?>" alt="Gambar ke <?=$comic->image_number?>">
     <?php endforeach; ?>
     
