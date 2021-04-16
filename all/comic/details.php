@@ -54,7 +54,7 @@ if (isset($_GET["comic"])) {
         <ol class="list-group list-group-numbered">
           <?php foreach ($comic->chapter as $chapter): ?>
           <li class="list-group-item list-group-item-action">
-            <a href="<?= $chapter->chapter_endpoint ?>" class="text-decoration-none">
+            <a href="read.php?chapter=<?= $chapter->chapter_endpoint ?>" class="text-decoration-none">
               <?= $chapter->chapter_title ?>
             </a>
           </li>
