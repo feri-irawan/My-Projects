@@ -29,9 +29,7 @@ $projects = json_decode(file_get_contents("projects.json"), true);
     </li>
     <?php foreach ($projects as $project): ?>
       <li class="list-group-item list-group-item-action">
-        <a href="<?= $project["url"] ?>">
-          <?= $project["name"] ?>
-        </a>
+        <a href="<?= $project["url"] ?>"><?= $project["name"] ?></a>
       </li>
     <?php endforeach; ?>
   </ol>
