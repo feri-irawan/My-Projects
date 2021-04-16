@@ -3,7 +3,7 @@ if (isset($_GET["comic"])) {
   $endPoint = "https://mangamint.kaedenoki.net/api/manga/";
   $comicName = $_GET["comic"];
   
-  $comicData = file_get_contents("{$endPoint}detail/{$comicName}");
+  $comicData = file_get_contents("{$endPoint}detail/$comicName");
   $comicData = json_decode($comicData);
   
   print_r($manga);
