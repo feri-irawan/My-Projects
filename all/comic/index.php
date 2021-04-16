@@ -32,7 +32,7 @@ if (isset($_GET["read"])) {
   $variants = json_decode($variants, true);
   
   print_r($variants);
-  print_r("============")
+  print_r("============");
   print_r($response_data);
 }
 ?>
