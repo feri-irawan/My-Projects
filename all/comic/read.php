@@ -44,6 +44,24 @@ if (isset($_GET["comic"])) {
         </ul>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+        <h6>Synopsis</h6>
+        <?=$comic->synopsis?>
+      </div>
+      <div class="col-12">
+        <h6>Chapter</h6>
+        <ol class="list-group list-group-numbered">
+          <?php foreach ($comic->chapter as $chapter): ?>
+          <li class="list-group-item list-group-item-action">
+            <a href="<?= $chapter["chapter_endpoint"] ?>" class="text-decoration-none">
+              <?= $chapter["chapter_title"] ?>
+            </a>
+          </li>
+          <?php endforeach; ?>
+        </ol>
+      </div>
+    </div>
     
     
   </section>
