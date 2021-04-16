@@ -26,7 +26,7 @@ $manga = json_decode($manga);
         <?php foreach ($manga->manga_list as $row): ?>
         <div class="col-md-6 mb-3">
           <div class="card">
-            <img src="<?=$row->thumb?>" class="card-img-top">
+            <img src="read.php?endpoint=<?=$row->thumb?>" class="card-img-top">
             <div class="card-body">
               <a class="text-decoration-none" href="<?=$row->endpoint?>" target="_blank">
                 <h5 class="card-title"><?=$row->title?></h5>
