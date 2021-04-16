@@ -32,7 +32,7 @@ print_r($manga);
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Jenis: <?=$row->type?></li>
-                <li class="list-group-item"><?=$row->chapter?></li>
+                <li class="list-group-item">Chapter: <?=substr($row->chapter, 8)?></li>
               </ul>
             <div class="card-body">
               <p class="card-text">
