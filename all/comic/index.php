@@ -1,33 +1,23 @@
 <?php
-if (isset($_GET['character-id'])) {
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$ts = time();
+$public_key = 'cfa476604e04fd6e0bc9c86eb904badc';
+$private_key = '983e3d08023e136611550d3eca68d89366482d1f';
+$hash = md5($ts . $private_key . $public_key);
 
-  $character_id = $_GET['character-id'];
+$query_params = [
+    'apikey' => $public_key,
+    'ts' => $ts,
+    'hash' => $hash
+];
 
-  $ts = time();
-  $public_key = 'cfa476604e04fd6e0bc9c86eb904badc';
-  $private_key = '983e3d08023e136611550d3eca68d89366482d1f';
-  $hash = md5($ts . $private_key . $public_key);
+//convert array into query parameters
+$query = http_build_query($query_params);
 
-  $query = array(
-   'format' => 'comic',
-   'formatType' => 'comic',
-   'apikey' => $public_key,
-   'ts' => $ts,
-   'hash' => $hash,
-  );
+//make the request
+$response = file_get_contents('http://gateway.marvel.com/v1/public/comics?' . $query);
 
-  curl_setopt($curl, CURLOPT_URL,
-   "https://gateway.marvel.com:443/v1/public/characters/" . $character_id . "/comics" . "?" . http_build_query($query)
-  );
+//convert the json string to an array
+$response_data = json_decode($response, true);
 
-  $result = json_decode(curl_exec($curl), true);
-
-  curl_close($curl);
-
-  var_dump(json_encode($result));
-
- } else {
-  echo "Character Id not defined";
- }
+//print
+print_r($response_data);
