@@ -36,27 +36,19 @@ if (isset($_GET["chapter"])) {
       <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_page?></li>
     </ul>
     
-<div id="comicImage" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#comicImage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#comicImage" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#comicImage" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+<div id="comic-slide" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
   <div class="carousel-inner">
-    
     <?php foreach ($comic->chapter_image as $comic): ?>
-    
     <div class="carousel-item <?=($comic->image_number == 1) ? "active":""; ?>">
       <img src="<?=$comic->chapter_image_link?>" class="d-block w-100" alt="Gambar ke <?=$comic->image_number?>">
     </div>
     <?php endforeach; ?>
-    
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#comicImage" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#comic-slide" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#comicImage" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#comic-slide" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
