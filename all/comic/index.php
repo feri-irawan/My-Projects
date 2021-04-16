@@ -6,7 +6,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH
 
   $character_id = $_GET['character-id'];
 
-  $ts = time();
+  $ts = 1;
   $public_key = 'cfa476604e04fd6e0bc9c86eb904badc';
   $private_key = '983e3d08023e136611550d3eca68d89366482d1f';
   $hash = md5($ts . $private_key . $public_key);
