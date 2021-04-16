@@ -23,7 +23,7 @@ print_r($manga);
   <section class="container">
     <div class="row">
       <div class="col-md-6">
-        <?php foreach ($manga->manga_list as $row): ?>
+        <?php foreach ($manga->manga_list[] as $row): ?>
           <!-- html... -->
         <?php endforeach; ?>
         <div class="card">
