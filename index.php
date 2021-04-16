@@ -1,1 +1,5 @@
-This the index.php
+<?php
+if (isset($_GET["add-project"])) {
+  $project_form = true;
+}
+?>
