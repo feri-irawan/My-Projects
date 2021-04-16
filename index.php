@@ -7,15 +7,10 @@
  
 //Default
 echo file_get_contents("projects.json");
-
-// Display project form
-if (isset($_GET["add-project"])) {
-  $project_form = true;
-}
 ?>
 
 
-<?php if ($project_form === true): ?>
+<?php if (isset($_GET["add-project"])): ?>
 <!doctype html>
 <html lang="en">
   <head>
