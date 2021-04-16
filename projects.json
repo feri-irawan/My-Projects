@@ -1,10 +1,10 @@
 [
     {
         "name": "Comic",
-        "url": "comic"
+        "url": "all/comic"
     },
     {
         "name": "Alquran Online",
-        "url": "alquran"
+        "url": "all/alquran"
     }   
 ]
