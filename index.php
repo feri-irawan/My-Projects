@@ -18,7 +18,7 @@ if (isset($_GET["add-project"])) {
   <body>
     
     <section class="container p-3">
-      <?php if ($alert == true): ?>
+      <?php if (isset($_GET["success-add"]): ?>
         <div class="alert alert-success">
           Has successfully added a new project to the list!
         </div>
@@ -61,6 +61,7 @@ if (isset($_GET["add-project"])) {
     file_put_contents($json_url, $data);
    
     header("Location: index.php?success-add");
+    exit();
   }
   ?>
 
