@@ -25,7 +25,7 @@ $projects = json_decode(file_get_contents("projects.json"), true);
     
   <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action active list-group-numbered">
-        Projects
+      Projects
     </a>
     <?php foreach ($projects as $project): ?>
       <a href="<?= $project["url"] ?>" class="list-group-item list-group-item-action">
