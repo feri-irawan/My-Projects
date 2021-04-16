@@ -34,10 +34,8 @@ print_r($manga);
                 <li class="list-group-item">Jenis: <?=$row->type?></li>
                 <li class="list-group-item">Chapter: <?=substr($row->chapter, 8)?></li>
               </ul>
-            <div class="card-body">
-              <p class="card-text">
-                <small class="text-muted">Diperbarui <?=$row->updated_on?> yang lalu</small>
-              </p>
+            <div class="card-footer">
+              <small class="text-muted">Diperbarui <?=$row->updated_on?> yang lalu</small>
             </div>
           </div>
         </div>
