@@ -16,7 +16,14 @@ if (isset($_GET["add-project"])) {
     <title>Add Project List</title>
   </head>
   <body>
+    
     <section class="container">
+      <?php if ($alert == true): ?>
+        <div class="alert alert-success">
+          Has successfully added a new project to the list!
+        </div>
+      <?php endif; ?>
+      
       <form action="" method="post">
         <div class="input-group mb-3">
           <span class="input-group-text">Name</span>
@@ -29,7 +36,31 @@ if (isset($_GET["add-project"])) {
         <button name="btn-submit" type="submit" class="btn btn-secondary">Save</button>
       </form>
     </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   </body>
 </html>
+
+  <?php
+  if (isset($_POST["btn-submit"])) {
+    $name = $_POST["input-name"];
+    $url = $_POST["input-url"];
+    
+    $json_url = "projects.json";
+    $data = file_get_contents($json_url);
+    $data = json_decode($data);
+    
+    $query = [
+      "name" => $name,
+      "url" => $url
+      ];
+    
+    $saveto["projects"] = $query;
+    $data = json_encode($saveto, JSON_PRETTY_PRINT);
+    file_put_contents($json_url, $data);
+   
+    $alert = true;
+  }
+  ?>
+
 <?php endif; ?>
