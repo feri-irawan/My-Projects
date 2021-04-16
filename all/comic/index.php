@@ -2,7 +2,7 @@
 $endPoint = "https://mangamint.kaedenoki.net/api/manga/";
 $pageNumber = 1;
 $manga = file_get_contents("{$endPoint}page/{$pageNumber}");
-$manga = json_decode($manga, true);
+$manga = json_decode($manga);
 
 print_r($manga);
 ?>
@@ -23,24 +23,25 @@ print_r($manga);
   <section class="container">
     <div class="row">
       <div class="col-md-6">
-        <?php foreach ($manga["manga_list"] as $row): ?>
-          <!-- html... -->
-        <?php endforeach; ?>
+        
+        <?php foreach ($manga->manga_list as $row): ?>
         <div class="card">
-          <img src="<?=$row["thumb"]?>" class="card-img-top">
+          <img src="<?=$row->thumb?>" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title"><?=$row["title"]?></h5>
+            <h5 class="card-title"><?=$row->title?></h5>
           </div>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item">Jenis: <?=$row["type"]?></li>
-              <li class="list-group-item">Chapter: <?=$row["chapter"]?></li>
+              <li class="list-group-item">Jenis: <?=$row->type?></li>
+              <li class="list-group-item">Chapter: <?=$row->chapter?></li>
             </ul>
           <div class="card-body">
             <p class="card-text">
-              <small class="text-muted">Diperbarui <?=$row["updated_on"]?> yang lalu</small>
+              <small class="text-muted">Diperbarui <?=$row->updated_on?> yang lalu</small>
             </p>
           </div>
         </div>
+        <?php endforeach; ?>
+        
       </div>
     </div>
   </section>
