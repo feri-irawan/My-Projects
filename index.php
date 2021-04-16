@@ -18,7 +18,7 @@ if (isset($_GET["add-project"])) {
   <body>
     
     <section class="container p-3">
-      <?php if (isset($_GET["success-add"]): ?>
+      <?php if (isset($_GET["success-add"])): ?>
         <div class="alert alert-success">
           Has successfully added a new project to the list!
         </div>
