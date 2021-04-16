@@ -30,7 +30,7 @@ $projects = json_decode(file_get_contents("projects.json"), true);
     
   <ol class="list-group">
     <li class="list-group-item list-group-item-action active">
-        Projects
+      Projects
     </li>
     <?php foreach ($projects as $project): ?>
       <li class="list-group-item list-group-item-action">
