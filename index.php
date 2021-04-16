@@ -1,4 +1,14 @@
 <?php
+/**
+ * =======================
+ * Hi, welcome to my all projects repository
+ * =======================
+ */
+ 
+//Default
+echo file_get_contents("projects.json");
+
+// Display project form
 if (isset($_GET["add-project"])) {
   $project_form = true;
 }
