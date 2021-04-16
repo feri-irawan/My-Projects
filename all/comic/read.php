@@ -45,7 +45,7 @@ if (isset($_GET["comic"])) {
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 mb-3">
         <h5>Synopsis</h5>
         <?=$comic->synopsis?>
       </div>
@@ -54,8 +54,8 @@ if (isset($_GET["comic"])) {
         <ol class="list-group list-group-numbered">
           <?php foreach ($comic->chapter as $chapter): ?>
           <li class="list-group-item list-group-item-action">
-            <a href="<?= $chapter["chapter_endpoint"] ?>" class="text-decoration-none">
-              <?= $chapter["chapter_title"] ?>
+            <a href="<?= $chapter->chapter_endpoint ?>" class="text-decoration-none">
+              <?= $chapter->chapter_title ?>
             </a>
           </li>
           <?php endforeach; ?>
