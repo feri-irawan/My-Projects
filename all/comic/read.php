@@ -46,7 +46,7 @@ if (isset($_GET["chapter"])) {
     
     <?php foreach ($comic->chapter_image as $comic): ?>
     
-    <div class="carousel-item <?=($comic->image_number == 1) ? "active"; ?>">
+    <div class="carousel-item <?=($comic->image_number == 1) ? "active":""; ?>">
       <img src="<?=$comic->chapter_image_link?>" class="d-block w-100" alt="Gambar ke <?=$comic->image_number?>">
     </div>
     <?php endforeach; ?>
