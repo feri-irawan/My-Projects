@@ -20,7 +20,7 @@ $response = file_get_contents('http://gateway.marvel.com/v1/public/comics?' . $q
 $response_data = json_decode($response, true);
 
 //print
-print_r($response_data);
+//print_r($response_data);
 ?>
 
 <!doctype html>
