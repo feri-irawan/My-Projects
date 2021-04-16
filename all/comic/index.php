@@ -20,6 +20,27 @@ print_r($manga);
 </head>
 <body>
   
+  <section class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="xxxxx" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor.</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Jenis: xxx</li>
+              <li class="list-group-item">Chapter: xxx</li>
+            </ul>
+          <div class="card-body">
+            <p class="card-text">
+              <small class="text-muted">Diperbarui pada xxx</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
