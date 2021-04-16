@@ -18,26 +18,21 @@ $projects = json_decode(file_get_contents("projects.json"), true);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <title>Add Project List</title>
-  <style>
-  a {
-    text-decoration: none;
-  }
-  </style>
 </head>
 <body>
   
   <section class="container p-3">
     
-  <ol class="list-group">
-    <li class="list-group-item list-group-item-action active">
-      Projects
-    </li>
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active list-group-numbered">
+        Projects
+    </a>
     <?php foreach ($projects as $project): ?>
-      <li class="list-group-item list-group-item-action">
-        <a href="<?= $project["url"] ?>"><?= $project["name"] ?></a>
-      </li>
+      <a href="<?= $project["url"] ?>" class="list-group-item list-group-item-action">
+        <?= $project["name"] ?>
+      </a>
     <?php endforeach; ?>
-  </ol>
+  </div>
   
   
   
