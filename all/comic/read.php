@@ -28,7 +28,7 @@ if (isset($_GET["chapter"])) {
 </head>
 <body>
   
-  <section class="container p-3">
+  <section class="container p-0">
     
     <ul class="list-group list-group-flush mb-3">
       <li class="list-group-item">Judul Comic: <?=$title?></li>
