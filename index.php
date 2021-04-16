@@ -3,3 +3,33 @@ if (isset($_GET["add-project"])) {
   $project_form = true;
 }
 ?>
+
+
+<?php if ($project_form === true): ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Add Project List</title>
+  </head>
+  <body>
+    <section class="container">
+      <form action="" method="post">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Name</span>
+          <input name="input-name" type="text" class="form-control" required>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">URL</span>
+          <input name="input-url" type="text" class="form-control" required>
+        </div>
+        <button name="btn-submit" type="submit" class="btn btn-secondary">Save</button>
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  </body>
+</html>
+<?php endif; ?>
