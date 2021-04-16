@@ -28,10 +28,10 @@ if (isset($_GET["comic"])) {
   <section class="container p-3">
     
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <img class="rounded" src="<?=$comic->thumb?>">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><h5><?=$comic->title?></h5></li>
           <li class="list-group-item">Jenis: <?=$comic->type?></li>
