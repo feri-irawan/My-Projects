@@ -52,9 +52,9 @@ $manga = json_decode($manga);
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <?php for ($i = 0; $i <= 10; $i++): ?>
+    <li class="page-item"><a class="page-link" href="page=<?=$i?>"><?=$i?></a></li>
+    <?php endfor; ?>
     <li class="page-item">
       <a class="page-link" href="page=<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
