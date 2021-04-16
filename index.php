@@ -23,10 +23,7 @@ $projects = json_decode(file_get_contents("projects.json"), true);
   
   <section class="container p-3">
     
-  <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action active list-group-numbered">
-      Projects
-    </a>
+  <div class="list-group list-group-numbered">
     <?php foreach ($projects as $project): ?>
       <a href="<?= $project["url"] ?>" class="list-group-item list-group-item-action">
         <?= $project["name"] ?>
