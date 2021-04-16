@@ -60,7 +60,7 @@ if (isset($_GET["add-project"])) {
     $data = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($json_url, $data);
    
-    header("Location: index.php?success-add");
+    header("Location: index.php?add-project&success-add");
     exit();
   }
   ?>
