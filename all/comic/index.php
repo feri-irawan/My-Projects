@@ -1,6 +1,6 @@
 <?php
 $endPoint = "https://mangamint.kaedenoki.net/api/manga/";
-$pageNumber = 1;
+$pageNumber = (isset($_GET["page"])) ? $_GET["page"] : 1;
 $manga = file_get_contents("{$endPoint}page/{$pageNumber}");
 $manga = json_decode($manga);
 
@@ -48,15 +48,15 @@ $manga = json_decode($manga);
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-center">
     <li class="page-item">
-      <a class="page-link" href="page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
+      <a class="page-link" href="?page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
     <?php for ($i = 1; $i <= 5; $i++): ?>
-    <li class="page-item"><a class="page-link" href="page=<?=$i?>"><?=$i?></a></li>
+    <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
     <?php endfor; ?>
     <li class="page-item">
-      <a class="page-link" href="page=<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
+      <a class="page-link" href="?page=<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
