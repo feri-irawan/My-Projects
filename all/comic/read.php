@@ -2,6 +2,8 @@
 if (isset($_GET["chapter"])) {
   $endPoint = "https://mangamint.kaedenoki.net/api/";
   $chapter = $_GET["chapter"];
+  $title = $_GET["title"];
+  $chapterTitle = $_GET["chapter-title"];
   
   $comicData = file_get_contents("{$endPoint}chapter/{$chapter}");
   $comicData = json_decode($comicData);
@@ -28,6 +30,10 @@ if (isset($_GET["chapter"])) {
   
   <section class="container p-3">
     
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><?=$title?></li>
+      <li class="list-group-item"><?=$chapterTitle?></li>
+    </ul>
 
   </section>
  
