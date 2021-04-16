@@ -37,22 +37,23 @@ $response_data = json_decode($response, true);
 </head>
 <body>
   
-  <div class="row">
-      
-  </div>
-  <?php foreach ($response_data["data"]["results"] as $comic): ?>
-    <div class="col-6">
-      <div class="card">
-        <img src="<?=$comic['thumbnail']['path'].".".$comic['thumbnail']['extension']?>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><?=$comic["title"]?></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><?=$comic["pageCount"]?> pages</h6>
-          <p class="card-text"><?=$comic["description"]?></p>
-          <a href="#" class="btn btn-primary">Read now!</a>
+  <section class="container">
+    <div class="row">
+    <?php foreach ($response_data["data"]["results"] as $comic): ?>
+      <div class="col-6">
+        <div class="card">
+          <img src="<?=$comic['thumbnail']['path'].".".$comic['thumbnail']['extension']?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?=$comic["title"]?></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><?=$comic["pageCount"]?> pages</h6>
+            <p class="card-text"><?=$comic["description"]?></p>
+            <a href="#" class="btn btn-primary">Read now!</a>
+          </div>
         </div>
       </div>
+    <?php endforeach; ?>
     </div>
-  <?php endforeach; ?>
+  </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
