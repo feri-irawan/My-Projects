@@ -9,7 +9,7 @@ if (isset($_GET["chapter"])) {
   $comicData = json_decode($comicData);
   
   $comic = $comicData;
-  print_r($comic);
+  //print_r($comic);
 } else {
   $error = true;
 }
