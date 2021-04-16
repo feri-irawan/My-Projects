@@ -42,7 +42,7 @@ print_r($response_data);
   </div>
   <?php foreach ($response_data["data"]["results"] as $comic): ?>
     <div class="col-6">
-      <div class="card" style="width: 18rem;">
+      <div class="card">
         <img src="<?=$comic['thumbnail']['path'].".".$comic['thumbnail']['extension']?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
