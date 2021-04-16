@@ -20,7 +20,7 @@ $manga = json_decode($manga);
 </head>
 <body>
   
-  <section class="container">
+  <section class="container p-3">
     <div class="row">
         
         <?php foreach ($manga->manga_list as $row): ?>
