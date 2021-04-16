@@ -27,6 +27,12 @@ $response_data = json_decode($response, true);
 
 //print
 if (isset($_GET["read"])) {
+  $urlVariants = $response_data["data"]["results"]["variants"][0]["resourceURI"];
+  $variants = file_get_contents("$urlVariants?$query");
+  $variants = json_decode($variants, true);
+  
+  print_r($variants);
+  print_r("============")
   print_r($response_data);
 }
 ?>
