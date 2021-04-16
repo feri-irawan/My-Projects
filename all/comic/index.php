@@ -28,7 +28,7 @@ $manga = json_decode($manga);
           <div class="card">
             <img src="<?=$row->thumb?>" class="card-img-top">
             <div class="card-body">
-              <a class="text-decoration-none" href="read.php?comic=<?=$row->endpoint?>" target="_blank">
+              <a class="text-decoration-none" href="details.php?comic=<?=$row->endpoint?>" target="_blank">
                 <h5 class="card-title"><?=$row->title?></h5>
               </a>
             </div>
