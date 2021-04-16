@@ -37,7 +37,7 @@ print_r($manga);
             </ul>
           <div class="card-body">
             <p class="card-text">
-              <small class="text-muted">Diperbarui pada <?=$row->update_on?></small>
+              <small class="text-muted">Diperbarui <?=$row->update_on?> yang lalu</small>
             </p>
           </div>
         </div>
