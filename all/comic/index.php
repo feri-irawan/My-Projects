@@ -32,12 +32,12 @@ print_r($manga);
             <h5 class="card-title"><?=$row->title?></h5>
           </div>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item">Jenis: xxx</li>
-              <li class="list-group-item">Chapter: xxx</li>
+              <li class="list-group-item">Jenis: <?=$row->type?></li>
+              <li class="list-group-item">Chapter: <?=$row->chapter?></li>
             </ul>
           <div class="card-body">
             <p class="card-text">
-              <small class="text-muted">Diperbarui pada xxx</small>
+              <small class="text-muted">Diperbarui pada <?=$row->update_on?></small>
             </p>
           </div>
         </div>
