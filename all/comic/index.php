@@ -28,7 +28,7 @@ $response_data = json_decode($response, true);
 //print
 if (isset($_GET["read"])) {
   $urlVariants = $response_data["data"]["results"]["variants"][0]["resourceURI"];
-  $variants = file_get_contents($urlVariants."?".$query);
+  $variants = file_get_contents("http://gateway.marvel.com/v1/public/comics/82967?".$query);
   $variants = json_decode($variants, true);
   
   print_r($variants);
