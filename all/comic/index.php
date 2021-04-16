@@ -26,7 +26,9 @@ if (isset($_GET["read"])) {
 $response_data = json_decode($response, true);
 
 //print
-//print_r($response_data);
+if (isset($_GET["read"])) {
+  print_r($response_data);
+}
 ?>
 
 <!doctype html>
