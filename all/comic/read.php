@@ -36,7 +36,7 @@ if (isset($_GET["chapter"])) {
       <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_pages?></li>
     </ul>
     
-<div id="comic-slide" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+<div id="comic-slide" class="carousel slide shadow-sm" data-bs-touch="false" data-bs-interval="false">
   <div class="carousel-inner">
     <?php foreach ($comic->chapter_image as $comic): ?>
     <div class="carousel-item <?=($comic->image_number == 1) ? "active":""; ?>">
