@@ -8,7 +8,7 @@ if (isset($_GET["comic"])) {
   
   print_r($comicData);
 } else {
-  $error = true
+  $error = true;
 }
 ?>
 <!doctype html>
