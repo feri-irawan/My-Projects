@@ -33,7 +33,7 @@ if (isset($_GET["chapter"])) {
     <ul class="list-group list-group-flush mb-3">
       <li class="list-group-item">Judul Comic: <?=$title?></li>
       <li class="list-group-item">Chapter: <?=$chapterTitle?></li>
-      <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_page?></li>
+      <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_pages?></li>
     </ul>
     
 <div id="comic-slide" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
