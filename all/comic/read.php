@@ -31,7 +31,7 @@ if (isset($_GET["chapter"])) {
   <section class="container p-3">
     
     <ul class="list-group list-group-flush mb-3">
-      <li class="list-group-item"><?=$title?></li>
+      <li class="list-group-item">Judul Comic: <?=$title?></li>
       <li class="list-group-item"><?=$chapterTitle?></li>
       <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_page?></li>
     </ul>
