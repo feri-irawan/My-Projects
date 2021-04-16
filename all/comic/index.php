@@ -45,7 +45,7 @@ $manga = json_decode($manga);
         
     </div>
     
-<nav aria-label="Page navigation">
+<nav class="text-center" aria-label="Page navigation">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
