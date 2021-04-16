@@ -1,7 +1,7 @@
 <?php
 $endPoint = "https://mangamint.kaedenoki.net/api/manga/";
 $pageNumber = 1;
-$manga = file_get_contents("$endPoint/page/$pageNumber.json");
+$manga = file_get_contents("$endPoint/page/$pageNumber");
 $manga = json_decode($manga);
 
 print_r($manga);
