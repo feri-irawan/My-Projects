@@ -4,7 +4,7 @@ $pageNumber = 1;
 $manga = file_get_contents("{$endPoint}page/{$pageNumber}");
 $manga = json_decode($manga);
 
-print_r($manga);
+//print_r($manga);
 ?>
 <!doctype html>
 <html lang="en">
