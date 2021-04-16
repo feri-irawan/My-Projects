@@ -6,7 +6,7 @@ if (isset($_GET["comic"])) {
   $comicData = file_get_contents("{$endPoint}detail/{$comicName}");
   $comicData = json_decode($comicData);
   
-  print_r($comicData);
+  $comic = $comicData;
 } else {
   $error = true;
 }
@@ -27,7 +27,23 @@ if (isset($_GET["comic"])) {
   
   <section class="container p-3">
     
-    
+    <div class="row">
+      <div class="col-md-6">
+        <img src="<?=$comic->title?>">
+      </div>
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><?=$comic->title?></li>
+          <li class="list-group-item">Jenis: <?=$comic->type?></li>
+          <li class="list-group-item">Penulis: <?=$comic->author?></li>
+          <li class="list-group-item">Status: <?=$comic->status?></li>
+          <li class="list-group-item">Genre: 
+          <?php foreach ($comic->genre_list as $genre): ?>
+            <span class="badge bg-light text-dark"><?=$comic->genre_name?></span>
+          <?php endforeach; ?></li>
+        </ul>
+      </div>
+    </div>
     
     
   </section>
