@@ -34,7 +34,7 @@ $manga = json_decode($manga);
                 <li class="list-group-item">Jenis: <?=$row->type?></li>
                 <li class="list-group-item">Chapter: <?=substr($row->chapter, 8)?></li>
               </ul>
-            <div class="card-footer">
+            <div class="card-footer text-center">
               <small class="text-muted">Diperbarui <?=$row->updated_on?> yang lalu</small>
             </div>
           </div>
