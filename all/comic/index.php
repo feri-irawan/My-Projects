@@ -48,7 +48,7 @@ $manga = json_decode($manga);
 <nav aria-label="Page navigation">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
+      <a class="page-link" href="page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
@@ -56,7 +56,7 @@ $manga = json_decode($manga);
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
+      <a class="page-link" href="page=<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
