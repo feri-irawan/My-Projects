@@ -61,8 +61,6 @@ if (isset($_GET["chapter"])) {
   </button>
 </div>
 
-      <img src="<?=$comic->chapter_image_link?>" alt="Gambar ke <?=$comic->image_number?>">
-    
   </section>
  
 <?php if ($error === true): ?>
