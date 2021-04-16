@@ -14,7 +14,13 @@ $query_params = [
 $query = http_build_query($query_params);
 
 //make the request
-$response = file_get_contents('http://gateway.marvel.com/v1/public/comics?' . $query);
+if (isset($_GET["read"])) {
+  $id = $_GET["read"];
+  $response = file_get_contents("http://gateway.marvel.com/v1/public/comics/$id?" . $query);
+} else {
+  $response = file_get_contents('http://gateway.marvel.com/v1/public/comics?' . $query);
+}
+
 
 //convert the json string to an array
 $response_data = json_decode($response, true);
@@ -46,8 +52,7 @@ $response_data = json_decode($response, true);
           <div class="card-body">
             <h5 class="card-title"><?=$comic["title"]?></h5>
             <h6 class="card-subtitle mb-2 text-muted"><?=$comic["pageCount"]?> pages</h6>
-            <p class="card-text"><?=$comic["description"]?></p>
-            <a href="#" class="btn btn-primary">Read now!</a>
+            <a href="?read=<?=$comic['id']?>" class="btn btn-primary">Read now!</a>
           </div>
         </div>
       </div>
