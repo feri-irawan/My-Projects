@@ -30,7 +30,7 @@ $manga = json_decode($manga);
             <div class="card-body">
               <h5 class="card-title"><?=$row->title?></h5>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-horizontal">
                 <li class="list-group-item">Jenis: <?=$row->type?></li>
                 <li class="list-group-item">Chapter: <?=substr($row->chapter, 8)?></li>
               </ul>
