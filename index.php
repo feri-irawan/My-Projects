@@ -48,15 +48,16 @@ if (isset($_GET["add-project"])) {
     
     $json_url = "projects.json";
     $data = file_get_contents($json_url);
-    $data = json_decode($data);
+    $data = json_decode($data, true);
     
     $query = [
       "name" => $name,
       "url" => $url
       ];
     
-    $saveto["projects"] = $query;
-    $data = json_encode($saveto, JSON_PRETTY_PRINT);
+    $data[] = $query;
+    
+    $data = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($json_url, $data);
    
     $alert = true;
