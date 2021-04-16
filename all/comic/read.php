@@ -33,7 +33,7 @@ if (isset($_GET["comic"])) {
       </div>
       <div class="col-md-6">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><?=$comic->title?></li>
+          <li class="list-group-item"><h5><?=$comic->title?></h5></li>
           <li class="list-group-item">Jenis: <?=$comic->type?></li>
           <li class="list-group-item">Penulis: <?=$comic->author?></li>
           <li class="list-group-item">Status: <?=$comic->status?></li>
