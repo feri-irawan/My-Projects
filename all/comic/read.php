@@ -28,7 +28,7 @@ if (isset($_GET["comic"])) {
   <section class="container p-3">
     
     <div class="row justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-4 text-center">
         <img class="rounded" src="<?=$comic->thumb?>">
       </div>
       <div class="col-md-8">
