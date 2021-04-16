@@ -23,10 +23,13 @@ print_r($manga);
   <section class="container">
     <div class="row">
       <div class="col-md-6">
+        <?php foreach ($manga->manga_list as $row): ?>
+          <!-- html... -->
+        <?php endforeach; ?>
         <div class="card">
-          <img src="xxxxx" class="card-img-top">
+          <img src="<?=$row->thumb?>" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor.</h5>
+            <h5 class="card-title"><?=$row->title?></h5>
           </div>
           <ul class="list-group list-group-flush">
               <li class="list-group-item">Jenis: xxx</li>
