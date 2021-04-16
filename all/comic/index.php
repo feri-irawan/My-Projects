@@ -44,6 +44,33 @@ $manga = json_decode($manga);
         <?php endforeach; ?>
         
     </div>
+    
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <?php if (isset($_GET["page"]) == 2): ?>
+    <li class="page-item">
+      <a class="page-link" href="page=<?$_GET["page"] - 1?>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <?php else: ?>
+    <li class="page-item">
+      <a class="page-link" href="page=<?$_GET["page"] - 1?>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <?php endif; ?>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+   
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
   </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
