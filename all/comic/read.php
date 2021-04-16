@@ -10,8 +10,6 @@ if (isset($_GET["comic"])) {
 } else {
   $error = true
 }
-
-
 ?>
 <!doctype html>
 <html lang="en">
