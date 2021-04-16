@@ -50,7 +50,7 @@ if (isset($_GET["comic"])) {
         <?=$comic->synopsis?>
       </div>
       <div class="col-12">
-        <h6>Chapter</h6>
+        <h5>Chapter</h5>
         <ol class="list-group list-group-numbered">
           <?php foreach ($comic->chapter as $chapter): ?>
           <li class="list-group-item list-group-item-action">
