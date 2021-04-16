@@ -39,7 +39,7 @@ if (isset($_GET["comic"])) {
           <li class="list-group-item">Status: <?=$comic->status?></li>
           <li class="list-group-item">Genre: 
           <?php foreach ($comic->genre_list as $genre): ?>
-            <span class="badge bg-light text-dark"><?=$comic->genre_name?></span>
+            <span class="badge bg-light text-dark"><?=$genre->genre_name?></span>
           <?php endforeach; ?></li>
         </ul>
       </div>
