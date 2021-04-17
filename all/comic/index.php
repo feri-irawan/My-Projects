@@ -56,7 +56,7 @@ $manga = json_decode($manga);
     <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
     <?php endfor; ?>
     <li class="page-item">
-      <a class="page-link" href="?page=<?=(isset($_GET["page"]) < 10) ? $_GET["page"] + 1 : "#"; ?>" aria-label="Next">
+      <a class="page-link" href="?page=<?= $_GET["page"] + 1; ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
