@@ -36,23 +36,10 @@ if (isset($_GET["chapter"])) {
       <li class="list-group-item">Jumlah halaman: <?=$comic->chapter_pages?></li>
     </ul>
     
-<div id="comic-slide" class="carousel slide border border-1 rounded" data-bs-touch="false" data-bs-interval="false">
-  <div class="carousel-inner">
+
     <?php foreach ($comic->chapter_image as $comic): ?>
-    <div class="carousel-item <?=($comic->image_number == 1) ? "active":""; ?>">
       <img src="<?=$comic->chapter_image_link?>" class="d-block w-100" alt="Gambar ke <?=$comic->image_number?>">
-    </div>
     <?php endforeach; ?>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#comic-slide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#comic-slide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
   </section>
  
