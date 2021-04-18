@@ -27,7 +27,7 @@ $data = json_decode($data);
     <section class="container p-3">
       <div class="row">
         <?php foreach ($data->data as $row): 
-         $audio = "https://github.com/soachishti/Asma-ul-Husna/blob/master/audio/{$row->index}.mp3?raw=true"
+         $audio = "https://github.com/soachishti/Asma-ul-Husna/blob/master/audio/{$row->index}.mp3?raw=true";
         ?>
         <div class="col-md-6">
           <div class="card border-light shadow-sm mb-3">
