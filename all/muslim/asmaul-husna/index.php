@@ -26,7 +26,9 @@ $data = json_decode($data);
   
     <section class="container p-3">
       <div class="row">
-        <?php foreach ($data->data as $row): ?>
+        <?php foreach ($data->data as $row): 
+         $audio = "https://github.com/soachishti/Asma-ul-Husna/blob/master/audio/{$row->index}.mp3?raw=true"
+        ?>
         <div class="col-md-6">
           <div class="card border-light shadow-sm mb-3">
             <div class="card-header bg-info border-light">
@@ -36,6 +38,7 @@ $data = json_decode($data);
               <div class="row">
                 <div class="col-6">
                   <h5 class="pt-2"><?=$row->latin?></h5><br>
+                  <audio src="<?=$audio?>" controls preload="none"></audio>
                 </div>
                 
                 <div class="col-6 text-end">
