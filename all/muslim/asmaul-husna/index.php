@@ -17,6 +17,12 @@ $data = json_decode($data);
   </head>
   <body>
     
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Asmaul Husna</a>
+      </div>
+    </nav>
+  
     <section class="container">
       <div class="row">
         <?php foreach ($data->data as $row): ?>
