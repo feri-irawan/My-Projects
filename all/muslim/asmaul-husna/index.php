@@ -38,7 +38,6 @@ $data = json_decode($data);
               <div class="row">
                 <div class="col-6">
                   <h5 class="pt-2"><?=$row->latin?></h5><br>
-                  <audio src="<?=$audio?>" controls preload="none"></audio>
                 </div>
                 
                 <div class="col-6 text-end">
@@ -47,6 +46,7 @@ $data = json_decode($data);
                 
                 <div class="col-12">
                   <small><i><?=$row->translation_id?></i></small>
+                  <audio src="<?=$audio?>" controls preload="none"></audio>
                 </div>
               </div>
             </div>
