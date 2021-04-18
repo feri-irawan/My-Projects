@@ -12,8 +12,10 @@ $data = json_decode($data);
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="res/css/style.css">
+    
     <title>Asmaul Husna</title>
+    
   </head>
   <body>
     
@@ -38,7 +40,7 @@ $data = json_decode($data);
                 </div>
                 
                 <div class="col-6 text-end">
-                  <h5 class="text-arab"><?=$row->arabic?></h5>
+                  <h3 class="text-arab"><?=$row->arabic?></h3>
                 </div>
                 
                 <div class="col-12">
