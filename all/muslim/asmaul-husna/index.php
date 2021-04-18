@@ -35,7 +35,7 @@ $data = json_decode($data);
             <div class="card-body">
               <div class="row">
                 <div class="col-6">
-                  <h5 class="pt-3"><?=$row->latin?></h5><br>
+                  <h5 class="pt-2"><?=$row->latin?></h5><br>
                 </div>
                 
                 <div class="col-6 text-end">
