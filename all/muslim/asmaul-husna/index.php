@@ -24,7 +24,7 @@ $data = json_decode($data);
       </div>
     </nav>
   
-    <section class="container">
+    <section class="container p-3">
       <div class="row">
         <?php foreach ($data->data as $row): ?>
         <div class="col-md-6">
