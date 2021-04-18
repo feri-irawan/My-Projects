@@ -15,7 +15,6 @@ $data = json_decode($data);
     <link rel="stylesheet" href="res/css/style.css">
     
     <title>Asmaul Husna</title>
-    
   </head>
   <body>
     
