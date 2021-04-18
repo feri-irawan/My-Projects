@@ -18,7 +18,7 @@ $data = json_decode($data);
   </head>
   <body>
     
-    <nav class="navbar navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Asmaul Husna</a>
       </div>
@@ -34,7 +34,7 @@ $data = json_decode($data);
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-6">
+                <div class="col-6 bg-warning">
                   <h5 class="align-middle"><?=$row->latin?></h5><br>
                 </div>
                 
