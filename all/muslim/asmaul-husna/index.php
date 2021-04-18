@@ -29,7 +29,7 @@ $data = json_decode($data);
         <?php foreach ($data->data as $row): ?>
         <div class="col-md-6">
           <div class="card border-light shadow-sm mb-3">
-            <div class="card-header border-light">
+            <div class="card-header bg-info border-light">
               No. <?=$row->index?>
             </div>
             <div class="card-body">
