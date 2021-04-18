@@ -34,7 +34,7 @@ $data = json_decode($data);
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-6 bg-warning">
+                <div class="col-6 bg-danger">
                   <h5 class="align-middle"><?=$row->latin?></h5><br>
                 </div>
                 
