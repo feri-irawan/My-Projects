@@ -18,7 +18,7 @@ $data = json_decode($data);
   </head>
   <body>
     
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Asmaul Husna</a>
       </div>
