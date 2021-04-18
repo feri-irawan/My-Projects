@@ -21,7 +21,7 @@ $data = json_decode($data);
       <div class="row">
         <?php foreach ($data->data as $row): ?>
         <div class="col-md-6">
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-header">
               No. <?=$row->index?>
             </div>
@@ -31,7 +31,7 @@ $data = json_decode($data);
                 <h5><?=$row->latin?></h5><br>
                 <i><?=$row->translation_id?></i>
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-end">
                 <h5 class="text-arab"><?=$row->arabic?></h5>
                 </div>
               </div>
