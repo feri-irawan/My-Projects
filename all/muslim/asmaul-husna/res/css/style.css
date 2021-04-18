@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Qalam';
+  src: url('AlQalamQuran.woff2') format('woff2'),
+       url('AlQalamQuran.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
