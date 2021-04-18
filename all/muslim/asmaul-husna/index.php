@@ -34,15 +34,15 @@ $data = json_decode($data);
             <div class="card-body">
               <div class="row">
                 <div class="col-6">
-                <h5><?=$row->latin?></h5><br>
+                  <h5><?=$row->latin?></h5><br>
                 </div>
                 
                 <div class="col-6 text-end">
-                <h5 class="text-arab"><?=$row->arabic?></h5>
+                  <h5 class="text-arab"><?=$row->arabic?></h5>
                 </div>
                 
                 <div class="col-12">
-                <i><?=$row->translation_id?></i>
+                  <i><?=$row->translation_id?></i>
                 </div>
               </div>
             </div>
