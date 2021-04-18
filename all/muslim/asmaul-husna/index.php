@@ -43,7 +43,7 @@ $data = json_decode($data);
                 </div>
                 
                 <div class="col-12">
-                  <i><?=$row->translation_id?></i>
+                  <small><i><?=$row->translation_id?></i></small>
                 </div>
               </div>
             </div>
