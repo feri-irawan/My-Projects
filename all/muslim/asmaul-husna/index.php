@@ -33,8 +33,8 @@ $data = json_decode($data);
               No. <?=$row->index?>
             </div>
             <div class="card-body">
-              <div class="row align-items-center">
-                <div class="col-6">
+              <div class="row">
+                <div class="col-6 align-items-center">
                   <h5><?=$row->latin?></h5><br>
                 </div>
                 
