@@ -83,6 +83,13 @@ $genres = json_decode($genres);
     </nav>
   </header>
   <section class="container p-3">
+    <div class="text-center">
+      <?php if (isset($_GET["genre"])): ?>
+        <h5>Hasil dari: <?=$_GET["genre"]?></h5>
+      <?php else: ?>
+        <h5>Terbaru</h5>
+      <?php endif; ?>
+    </div>
     <div class="row">
         
         <?php foreach ($manga->manga_list as $row): ?>
