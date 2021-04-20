@@ -85,7 +85,7 @@ $genres = json_decode($genres);
   <section class="container p-3">
     <div class="text-center">
       <?php if (isset($_GET["genre"])): ?>
-        <h5>Hasil dari: <?=$_GET["genre"]?></h5>
+        <h5>Genre: <b><?=$_GET["genre"]?></b></h5>
       <?php else: ?>
         <h5>Terbaru</h5>
       <?php endif; ?>
