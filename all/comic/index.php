@@ -7,7 +7,7 @@ $pageNumber = (isset($_GET["page"])) ? $_GET["page"] : 1;
 if (isset($_GET["genre"])) {
   // if there is a Genre
   $genresName = $_GET["genre"];
-  $endPoint = "$default_endpoint/$genresName/$pageNumber";
+  $endPoint = "$default_endpoint/genres/$genresName/$pageNumber";
   
 } else {
   // Default in homepage
