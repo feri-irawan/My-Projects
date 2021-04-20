@@ -106,7 +106,7 @@ $genres = json_decode($genres);
                 <li class="list-group-item">Chapter: <?=substr($row->chapter, 8)?></li>
               </ul>
             <div class="card-footer text-center">
-              <small class="text-muted">Diperbarui <?=$row->updated_on?> yang lalu</small>
+              <small class="text-muted">Diperbarui <?=(isset($row->updated_on)) ? $row->updated_on : "?" ?> yang lalu</small>
             </div>
           </div>
         </div>
