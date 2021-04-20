@@ -1,15 +1,21 @@
 <?php
-$endPoint = "https://mangamint.kaedenoki.net/api/";
+$endPoint = "https://mangamint.kaedenoki.net/api";
 $pageNumber = (isset($_GET["page"])) ? $_GET["page"] : 1;
-$manga = file_get_contents("{$endPoint}manga/page/{$pageNumber}");
+
+// Get Manga List
+$manga = file_get_contents("$endPoint/manga/page/$pageNumber");
 $manga = json_decode($manga);
 
-//print_r($manga);
-
-// Genre
-$genres = file_get_contents("{$endPoint}genres");
+// List Genre
+$genres = file_get_contents("$endPoint/genres");
 $genres = json_decode($genres);
 
+// Get Manga list base Genre
+if (isset($_GET["genre"])) {
+  $genreName = $_GET["genre"];
+  $manga = file_get_contents("$endPoint/genres/$genreName/$pageNumber");
+  $manga = json_decode($manga);
+}
 ?>
 <!doctype html>
 <html lang="en">
