@@ -20,7 +20,7 @@ $manga = json_decode($manga);
   
   <style>
     :root {
-      font-size: 14px;
+      font-size: 10px;
     }
   </style>
 </head>
