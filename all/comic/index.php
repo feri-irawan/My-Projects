@@ -77,14 +77,12 @@ $genres = json_decode($genres);
         </div>
       </div>
     </nav>
-    <div class="container">
-      <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-    </div>
   </header>
   <section class="container p-3">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
     <div class="text-center">
       <?php if (isset($_GET["genre"])): ?>
         <h5 class="text-capitalize">Genre: <b><?=$_GET["genre"]?></b></h5>
