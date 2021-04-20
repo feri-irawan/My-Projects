@@ -30,7 +30,7 @@ $manga = json_decode($manga);
     <div class="row">
         
         <?php foreach ($manga->manga_list as $row): ?>
-        <div class="col-sm-3 mb-3">
+        <div class="col-3 mb-3">
           <div class="card">
             <img src="<?=$row->thumb?>" class="card-img-top">
             <div class="card-body">
