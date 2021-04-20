@@ -57,10 +57,9 @@ $genres = json_decode($genres);
                 Genre(s)
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <?php foreach ($genres->list_genre as $row): ?>
+                <li><a class="dropdown-item" href="?genre=<?=$row->endpoint?>"><?=$row->genre_name?></a></li>
+                <?php endforeach; ?>
               </ul>
             </li>
           </ul>
