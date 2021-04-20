@@ -19,7 +19,7 @@ $manga = json_decode($manga);
   <title>Comic</title>
   
   <style>
-    @media and (min-width: 768px) {
+    @media (min-width: 768px) {
       :root {
         font-size: 10px;
       }
