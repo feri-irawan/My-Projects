@@ -85,7 +85,7 @@ $genres = json_decode($genres);
       </div>
     </nav>
   </header>
-  <section class="container p-3">
+  <section id="comic-list" class="container p-3">
     <div class="text-center">
       <?php if (isset($_GET["genre"])): ?>
         <h5 class="text-capitalize">Genre: <b><?=$_GET["genre"]?></b></h5>
