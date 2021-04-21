@@ -146,8 +146,8 @@ $genres = json_decode($genres);
         data: {
           $("#search-input").val();
         },
-        success: function (hasil) {
-          $("#comic-list").html(hasil);
+        success: function (data) {
+          $("#comic-list").html(data);
         }
       });
     });
