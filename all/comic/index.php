@@ -35,6 +35,9 @@ $genres = json_decode($genres);
   <title>Comic</title>
   
   <style>
+    :root{
+      font-size: 14px;
+    }
     @media (min-width: 768px) {
       :root {
         font-size: 10px;
