@@ -104,7 +104,7 @@ $genres = json_decode($genres);
                 <h5 class="card-title"><?=$row->title?></h5>
               </a>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush border-0">
                 <li class="list-group-item">Jenis: <?=$row->type?></li>
                 <li class="list-group-item">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></li>
               </ul>
