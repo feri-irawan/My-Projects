@@ -143,7 +143,9 @@ $genres = json_decode($genres);
       $.ajax({
         url: "search.php",
         type: "get",
-        data: $("#search-input").val(),
+        data: {
+          $("#search-input").val();
+        },
         success: function (hasil) {
           $("#comic-list").html(hasil);
         }
