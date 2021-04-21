@@ -117,23 +117,23 @@ $genres = json_decode($genres);
         
     </div>
     
-<nav aria-label="Page navigation">
-  <ul class="pagination justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="?page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <?php for ($i = 1; $i <= 5; $i++): ?>
-    <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
-    <?php endfor; ?>
-    <li class="page-item">
-      <a class="page-link" href="?page=<?= $_GET["page"] + 1; ?>" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="?page=<?=(isset($_GET["page"]) > 1) ? $_GET["page"] - 1 : "#"; ?>" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <?php for ($i = 1; $i <= 5; $i++): ?>
+        <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
+        <?php endfor; ?>
+        <li class="page-item">
+          <a class="page-link" href="?page=<?= $_GET["page"] + 1; ?>" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
