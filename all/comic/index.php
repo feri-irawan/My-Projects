@@ -97,16 +97,16 @@ $genres = json_decode($genres);
         
         <?php foreach ($manga->manga_list as $row): ?>
         <div class="col-md-3 mb-3">
-          <div class="card h-100 border-0 shadow-sm">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
             <img src="<?=$row->thumb?>" class="card-img-top">
             <div class="card-body">
               <a class="text-decoration-none" href="details.php?comic=<?=$row->endpoint?>" target="_blank">
                 <h5 class="card-title"><?=$row->title?></h5>
               </a>
             </div>
-            <ul class="list-group list-group-flush border-0">
-                <li class="list-group-item">Jenis: <?=$row->type?></li>
-                <li class="list-group-item">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></li>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0">Jenis: <?=$row->type?></li>
+                <li class="list-group-item border-0">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></li>
               </ul>
             <div class="card-footer text-center">
               <small class="text-muted">Diperbarui <?=(isset($row->updated_on)) ? $row->updated_on : "?" ?> yang lalu</small>
