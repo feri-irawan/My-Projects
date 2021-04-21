@@ -38,7 +38,7 @@ if (isset($_GET["chapter"])) {
     
 
     <?php foreach ($comic->chapter_image as $comic): ?>
-      <img src="<?=$comic->chapter_image_link?>" class="d-block w-100" alt="Gambar ke <?=$comic->image_number?>">
+      <img loading="lazy" src="<?=$comic->chapter_image_link?>" class="d-block w-100" alt="Gambar ke <?=$comic->image_number?>">
     <?php endforeach; ?>
 
   </section>
@@ -53,7 +53,7 @@ if (isset($_GET["chapter"])) {
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        Oops, ada yang error, sikahkan kembali kw halaman beranda!
+        Oops, ada yang error, sikahkan kembali ke halaman beranda!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
