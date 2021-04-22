@@ -9,6 +9,10 @@ if (isset($_GET["genre"])) {
   $genresName = $_GET["genre"];
   $endPoint = "$default_endpoint/genres/$genresName/$pageNumber";
   
+} elseif (isset($_GET["search"])) {
+  $keyword = $_GET["search"];
+  $endPoint = "$default_endpoint/search/$keyword";
+  
 } else {
   // Default in homepage
   $endPoint = "$default_endpoint/manga/page/$pageNumber";
