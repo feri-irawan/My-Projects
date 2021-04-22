@@ -23,7 +23,7 @@ $genres = file_get_contents("$default_endpoint/genres");
 $genres = json_decode($genres);
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
