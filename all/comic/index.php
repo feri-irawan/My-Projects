@@ -82,8 +82,8 @@ $genres = json_decode($genres);
               </ul>
             </li>
           </ul>
-          <form class="d-flex">
-            <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form action="" method="get" class="d-flex">
+            <input id="search-input" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
