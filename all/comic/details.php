@@ -10,7 +10,7 @@ if (isset($_GET["comic"])) {
   if ($comic->title != null) {
     $html = true;
   } else {
-    $protocol = ((empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";  
+    $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";  
     $CurPageURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];  
     echo "The URL of current page: ".$CurPageURL;
     $html = false;
