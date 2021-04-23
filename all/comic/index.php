@@ -113,7 +113,7 @@ $genres = json_decode($genres);
         <?php foreach ($manga->manga_list as $row): ?>
         <div class="col-md-3 mb-3">
           <div class="card h-100 border-0 shadow rounded-3">
-            <img src="<?=$row->thumb?>" class="card-img-top" loading="lazy" width="450" height="200">
+            <img src="<?=$row->thumb?>" class="card-img-top" loading="lazy" width="450" height="180">
             <div class="card-body">
               <a class="text-decoration-none" href="details.php?comic=<?=$row->endpoint?>" target="_blank">
                 <h5 class="card-title"><?=$row->title?></h5>
