@@ -7,11 +7,21 @@ if (isset($_GET["comic"])) {
   $comicData = json_decode($comicData);
   
   $comic = $comicData;
+  if ($comic->title != null) {
+    $html = true;
+  } else {
+    $protocol = ((!emptyempty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";  
+    $CurPageURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];  
+    echo "The URL of current page: ".$CurPageURL;
+    $html = false;
+  }
+  
   print_r($comic);
 } else {
   $error = true;
 }
 ?>
+<?php if ($html === true): ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +35,6 @@ if (isset($_GET["comic"])) {
   <title>Comic</title>
 </head>
 <body>
-  
   <section class="container p-3">
     
     <div class="row justify-content-center mb-3">
@@ -75,26 +84,26 @@ if (isset($_GET["comic"])) {
     
   </section>
  
-<?php if ($error === true): ?>
-<!-- Modal -->
-<div class="modal fade" id="errorAlert" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Error</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Oops, ada yang error, sikahkan kembali kw halaman beranda!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-        <button type="button" class="btn btn-primary" onclick="history.back()">Kembali</button>
+  <?php if ($error === true): ?>
+  <!-- Modal -->
+  <div class="modal fade" id="errorAlert" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Error</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Oops, ada yang error, sikahkan kembali kw halaman beranda!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-primary" onclick="history.back()">Kembali</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<?php endif; ?> 
+  <?php endif; ?> 
   
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -110,3 +119,4 @@ if (isset($_GET["comic"])) {
   </script>
 </body>
 </html>
+<?php endif; ?>
