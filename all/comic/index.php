@@ -9,6 +9,9 @@ if (isset($_GET["genre"])) {
   $genresName = $_GET["genre"];
   $endPoint = "$default_endpoint/genres/$genresName/$pageNumber";
   
+} elseif (isset($_GET["rekomendasi"])) {
+  $endPoint = "$default_endpoint/recomended";
+  
 } elseif (isset($_GET["search"])) {
   $keyword = $_GET["search"];
   $endPoint = "$default_endpoint/search/$keyword";
@@ -71,9 +74,12 @@ $genres = json_decode($genres);
             <li class="nav-item">
               <a class="nav-link" href="?populer">Populer</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?rekomendasi">Rekomendasi</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Genre(s)
+                Genre
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <?php foreach ($genres->list_genre as $row): ?>
