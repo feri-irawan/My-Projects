@@ -29,7 +29,7 @@ if (isset($_GET["comic"])) {
     
     <div class="row justify-content-center mb-3">
       <div class="col-md-4 text-center">
-        <img class="rounded mb-3" src="<?=$comic->thumb?>">
+        <img class="rounded mb-3 shadow-sm" src="<?=$comic->thumb?>">
       </div>
       <div class="col-md-8">
         <ul class="list-group list-group-flush">
@@ -37,10 +37,18 @@ if (isset($_GET["comic"])) {
           <li class="list-group-item">Jenis: <?=$comic->type?></li>
           <li class="list-group-item">Penulis: <?=$comic->author?></li>
           <li class="list-group-item">Status: <?=$comic->status?></li>
-          <li class="list-group-item">Genre: 
-          <?php foreach ($comic->genre_list as $genre): ?>
-            <span class="badge bg-light text-dark"><?=$genre->genre_name?></span>
-          <?php endforeach; ?></li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-3">
+                Genre: 
+              </div>
+              <div class="col-9">
+                <?php foreach ($comic->genre_list as $genre): ?>
+                  <span class="badge bg-light text-dark"><?=$genre->genre_name?></span>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
