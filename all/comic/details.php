@@ -7,6 +7,7 @@ if (isset($_GET["comic"])) {
   $comicData = json_decode($comicData);
   
   $comic = $comicData;
+  print_r($comic);
 } else {
   $error = true;
 }
