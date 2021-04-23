@@ -118,11 +118,9 @@ $genres = json_decode($genres);
               <a class="text-decoration-none" href="details.php?comic=<?=$row->endpoint?>" target="_blank">
                 <h5 class="card-title"><?=$row->title?></h5>
               </a>
+              <span class="badge bg-secondary">Jenis: <?=$row->type?></span>
+              <span class="badge bg-secondary">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></span>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item border-0">Jenis: <?=$row->type?></li>
-                <li class="list-group-item border-0">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></li>
-              </ul>
             <div class="card-footer text-center">
               <small class="text-muted">Diperbarui <?=(isset($row->updated_on)) ? $row->updated_on : "?" ?> yang lalu</small>
             </div>
