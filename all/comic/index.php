@@ -10,7 +10,7 @@ if (isset($_GET["genre"])) {
   $endPoint = "$default_endpoint/genres/$genresName/$pageNumber";
   
 } elseif (isset($_GET["rekomendasi"])) {
-  $endPoint = "$default_endpoint/recomended";
+  $endPoint = "$default_endpoint/recommended";
   
 } elseif (isset($_GET["search"])) {
   $keyword = $_GET["search"];
@@ -102,6 +102,8 @@ $genres = json_decode($genres);
         <h5 class="text-capitalize">Genre: <b><?=$_GET["genre"]?></b></h5>
       <?php elseif (isset($_GET["search"])): ?>
         <h5 class="text-capitalize">Hasil pencarian: <b><?=$_GET["search"]?></b></h5>
+      <?php elseif (isset($_GET["search"])): ?>
+        <h5>Rekomendasi</h5>
       <?php else: ?>
         <h5>Terbaru</h5>
       <?php endif; ?>
