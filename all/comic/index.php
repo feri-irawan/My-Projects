@@ -94,6 +94,8 @@ $genres = json_decode($genres);
     <div class="text-center">
       <?php if (isset($_GET["genre"])): ?>
         <h5 class="text-capitalize">Genre: <b><?=$_GET["genre"]?></b></h5>
+      <?php elseif (isset($_GET["search"])): ?>
+        <h5 class="text-capitalize">Hasil pencarian: <b><?=$_GET["search"]?></b></h5>
       <?php else: ?>
         <h5>Terbaru</h5>
       <?php endif; ?>
