@@ -23,16 +23,14 @@ if (isset($_GET["search"])) {
       <?php foreach ($manga->manga_list as $row): ?>
       <div class="col-md-3 mb-3">
         <div class="card h-100 border-0 shadow rounded-3">
-          <img src="<?=$row->thumb?>" class="card-img-top" loading="lazy">
+          <img src="<?=$row->thumb?>" class="card-img-top" loading="lazy" width="450" height="180">
           <div class="card-body">
             <a class="text-decoration-none" href="details.php?comic=<?=$row->endpoint?>" target="_blank">
               <h5 class="card-title"><?=$row->title?></h5>
             </a>
+            <span class="badge bg-secondary">Jenis: <?=$row->type?></span>
+            <span class="badge bg-secondary">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></span>
           </div>
-          <ul class="list-group list-group-flush">
-              <li class="list-group-item border-0">Jenis: <?=$row->type?></li>
-              <li class="list-group-item border-0">Chapter: <?=(isset($row->chapter)) ? substr($row->chapter, 8) : "?" ?></li>
-            </ul>
           <div class="card-footer text-center">
             <small class="text-muted">Diperbarui <?=(isset($row->updated_on)) ? $row->updated_on : "?" ?> yang lalu</small>
           </div>
