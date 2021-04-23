@@ -29,7 +29,7 @@ if (isset($_GET["comic"])) {
     
     <div class="row justify-content-center mb-3">
       <div class="col-md-4 text-center">
-        <img class="rounded mb-3 shadow-sm" src="<?=$comic->thumb?>">
+        <img class="rounded-3 mb-3 shadow-sm" src="<?=$comic->thumb?>">
       </div>
       <div class="col-md-8">
         <ul class="list-group list-group-flush">
