@@ -59,7 +59,7 @@ if (isset($_GET["comic"])) {
       </div>
       <div class="col-12">
         <h5>Chapter <span class="badge bg-secondary"><?=count($comic->genre_list)?></span></h5>
-        <ol class="list-group list-group-numbered">
+        <ol class="list-group">
           <?php foreach ($comic->chapter as $chapter): ?>
           <li class="list-group-item list-group-item-action">
             <a href="read.php?chapter=<?= $chapter->chapter_endpoint ."&title=". $comic->title ."&chapter-title=". $chapter->chapter_title?>" class="text-decoration-none">
