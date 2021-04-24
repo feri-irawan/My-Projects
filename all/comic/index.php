@@ -24,6 +24,7 @@ if (isset($_GET["genre"])) {
 // Get Manga List
 $manga = file_get_contents($endPoint);
 $manga = json_decode($manga);
+echo($endPoint);
 
 // List Genre
 $genres = file_get_contents("$default_endpoint/genres");
