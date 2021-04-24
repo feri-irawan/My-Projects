@@ -143,7 +143,7 @@ $genres = json_decode($genres);
         <li class="page-item"><a class="page-link" href="?page=<?=$i?>"><?=$i?></a></li>
         <?php endfor; ?>
         <li class="page-item">
-          <a class="page-link" href="?<?=(isset($_GET["search"])) ? "search=".$_GET["search"]."&" : ; ?>page=<?= $_GET["page"] + 1; ?>" aria-label="Next">
+          <a class="page-link" href="?<?=(isset($_GET["search"])) ? "search=$keyword&" : ; ?>page=<?= $_GET["page"] + 1; ?>" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
