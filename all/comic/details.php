@@ -8,21 +8,10 @@ if (isset($_GET["comic"])) {
   
   $comic = $comicData;
   
-  if ($comic->title != null) {
-    $html = true;
-  } else {
-    $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";  
-    $CurPageURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];  
-    $html = false;
-    header("Location: $CurPageURL");
-  }
-  
-  print_r($comic);
 } else {
   $error = true;
 }
 ?>
-<?php if ($html === true): ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -104,7 +93,7 @@ if (isset($_GET["comic"])) {
       </div>
     </div>
   </div>
-  <?php endif; ?> 
+  <?php endif; ?>
   
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -120,4 +109,3 @@ if (isset($_GET["comic"])) {
   </script>
 </body>
 </html>
-<?php endif; ?>
