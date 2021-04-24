@@ -51,9 +51,6 @@ $genres = json_decode($genres);
         font-size: 10px;
       }
     }
-    .rounded-3 {
-      border-radius: 10px;
-    }
   </style>
 </head>
 <body>
