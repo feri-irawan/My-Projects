@@ -31,7 +31,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script>
-    $(document).ready(function() {
+  
       let searchParams = new URLSearchParams(window.location.search);
       let pageNumber = searchParams.get("page");
       console.log(pageNumber);
@@ -65,7 +65,7 @@
                 <div class="card h-100">
                   <img src="`+ data.image +`" alt="" class="card-img-top">
                   <div class="card-body">
-                    <a class="text-decoration-none" href="details.html?anime=`+ data.linkId +`"><h5 class="card-title fw-bold">`+ data.title +`</h5></a>
+                    <a class="text-decoration-none" href="?anime=`+ data.linkId +`"><h5 class="card-title fw-bold">`+ data.title +`</h5></a>
                     <h6 class="text-muted">`+ data.sinopsis +`</h6>
                     <span class="badge bg-secondary">Rating: `+ data.rating +`</span>
                     <span class="badge bg-secondary">Status: `+ data.status +`</span>
@@ -79,7 +79,7 @@
           
         } // end success ajax
       }) // end ajax
-    }); // end document ready
+   // end document ready
     
     // pagination
     for (i = 1; i <= 5; i++) {
