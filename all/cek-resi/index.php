@@ -1,5 +1,5 @@
 <?php
-$api_key = "b0b6beed4cef4b155d14a9514fafd24e9797e3e075f81f488bc20fc53153a900";
+$api_key = "dbd77b68367dbd40be7f637b4f4ba496e467ba9282db6344906eb08a241f6aea";
 $courier = $_GET["courier"];
 $no_resi = $_GET["resi"];
 $params  = "api_key=$api_key&courier=$courier&awb=$no_resi";
