@@ -6,5 +6,9 @@
     {
         "name": "Alquran Online",
         "url": "all/alquran"
-    }   
+    },
+    {
+        "name": "Cek Resi Paket",
+        "url": "all/cek-resi"
+    }
 ]
