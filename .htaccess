@@ -1,3 +1,9 @@
+## Root File
+DirectoryIndex index.html index.php
+
+################################
+
+
 RewriteEngine On
 
 ##Force SSL
@@ -10,5 +16,3 @@ RewriteCond %{HTTPS} !=on
 
 # Redirect to https version
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Put the rest of your rewrite rules here
