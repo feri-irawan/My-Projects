@@ -4,11 +4,19 @@
         "url": "all/comic"
     },
     {
-        "name": "Alquran Online",
-        "url": "all/alquran"
+        "name": "Asmaul Husna",
+        "url": "all/muslim/asmaul-husna"
     },
     {
-        "name": "Cek Resi Paket",
+        "name": "Cari Kode Pos",
+        "url": "all/kode-pos"
+    },
+    {
+        "name": "Cek Resi",
         "url": "all/cek-resi"
-    }
+    },
+    {
+        "name": "Jadwal Sholat",
+        "url": "all/muslim/jadwal-sholat"
+    },
 ]
