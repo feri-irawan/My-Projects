@@ -1,6 +1,4 @@
-var http = require('http');
-
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World!');
-}).listen(8080);
+module.exports = (req, res) => {
+  const { name = 'World' } = req.query
+  res.send(`Hello ${name}!`)
+}
