@@ -92,3 +92,12 @@ function getKodePos() {
   
   event.preventDefault();
 }
+
+// Efek hover pada card
+$(".card").hover(
+  function() {
+    $(this).addClass("shadow-lg");
+  }, function() {
+    $(this).removeClass("shadow-lg");
+  }
+);
