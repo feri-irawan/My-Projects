@@ -1,8 +1,17 @@
 {
-  "name": "all",
-  "description": "Semua projek saya",
+  "name": "NodeJs",
+  "description": "Testing NodeJs",
   "version": "1.0.0",
+  "main": "all/NodeJs/index.js",
   "engines": {
     "node": "14.16.1"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Feri Irawan",
+      "email": "feriirawans1998@gmail.com",
+      "web": "https://github.com/feri-irawan"
+    }
+  ],
+  "homepage": "all/nodejs/index.js"
 }
