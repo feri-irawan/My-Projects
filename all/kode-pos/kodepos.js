@@ -77,6 +77,18 @@ function getKodePos() {
           </div>
           `);
       });
+      
+      // Efek hover pada card
+      $(".card").hover(function() {
+        $(this).css({
+          "border": "1px solid #007dff"
+        });
+      }, function() {
+        $(this).css({
+          "border": "none"
+        });
+      });
+      
     },
     error: function () {
       container.html(`
@@ -92,16 +104,3 @@ function getKodePos() {
   
   event.preventDefault();
 }
-
-// Efek hover pada card
-$(".card").hover(
-  function() {
-    $(this).addClass("border-primary");
-  }, function() {
-    $(this).removeClass("border-primary");
-  }
-);
-$(".card").hover(function() {
-  $(this).fadeOut( 100 );
-  $(this).fadeIn( 500 );
-});
