@@ -101,3 +101,7 @@ $(".card").hover(
     $(this).removeClass("border-primary");
   }
 );
+$(".card").hover(function() {
+  $(this).fadeOut( 100 );
+  $(this).fadeIn( 500 );
+});
