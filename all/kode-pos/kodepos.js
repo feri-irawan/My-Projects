@@ -96,8 +96,8 @@ function getKodePos() {
 // Efek hover pada card
 $(".card").hover(
   function() {
-    $(this).addClass("shadow-lg");
+    $(this).addClass("border-primary");
   }, function() {
-    $(this).removeClass("shadow-lg");
+    $(this).removeClass("border-primary");
   }
 );
