@@ -2,9 +2,13 @@
   "name": "NodeJs",
   "description": "Testing NodeJs",
   "version": "1.0.0",
-  "main": "all/NodeJs/index.js",
+  "main": "index.js",
   "engines": {
     "node": "14.16.1"
+  },
+  "scripts": {
+    "dev": "nodemon .index.js",
+    "start": "node ./index.js"
   },
   "contributors": [
     {
