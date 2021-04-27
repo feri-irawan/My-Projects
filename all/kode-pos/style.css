@@ -1,5 +1,6 @@
 .card, .card-header {
   border: none;
+  transition: .3s;
 }
 .card-header {
   color: #fff;
