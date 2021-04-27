@@ -17,7 +17,7 @@
       "web": "https://github.com/feri-irawan"
     }
   ],
-  "homepage": "all/nodejs/index.js",
+  "homepage": "index.js",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
