@@ -77,6 +77,16 @@ function getKodePos() {
           </div>
           `);
       });
+    },
+    error: function () {
+      container.html(`
+        <div class="card mb-3 shadow">
+          <div class="card-header bg-primary">Oops!</div>
+          <div class="card-body text-center">
+            <h5>Tidak ada hasil yang ditemukan</h5>
+          </div>
+        </div>
+      `);
     }
   });
   
