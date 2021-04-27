@@ -1,31 +1,30 @@
 {
-  "name": "NodeJs",
-  "description": "Testing NodeJs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "engines": {
-    "node": "14.16.1"
-  },
-  "scripts": {
-    "dev": "nodemon .index.js",
-    "start": "node ./index.js"
-  },
-  "contributors": [
-    {
-      "name": "Feri Irawan",
-      "email": "feriirawans1998@gmail.com",
-      "web": "https://github.com/feri-irawan"
+    "name": "mynodejs",
+    "version": "1.0.0",
+    "description": "Testing NodeJs",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ./index.js",
+        "start": "node .index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/feri-irawan/My-Projects/all/NodeJs.git"
+    },
+    "author": "Feri Irawan",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/feri-irawan/My-Projects/all/NodeJs/issue"
+    },
+    "homepage": "https://github.com/feri-irawan/My-Projects/all/NodeJs#readme",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "cheerio": "^1.0.0-rc.6",
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
     }
-  ],
-  "homepage": "index.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "cheerio": "^1.0.0-rc.6",
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
 }
