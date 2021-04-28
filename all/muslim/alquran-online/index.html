@@ -11,6 +11,27 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" id="btn-display-latin">Tampilkan Latin</a></li>
+            <li><a class="dropdown-item" id="btn-display-translate">Tampilkan Terjemahan</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="container p-3">
   <div class="row" id="quran"></div>
@@ -94,8 +115,6 @@ function getSurah() {
       
       // judul
       container.append(`
-        <button id="btn-display-latin">Latin</button>
-        <button id="btn-display-translate">Translate</button>
         <div class="text-center">
         <h3 class="text-arab">`+name.short+`</h3>
         <h5>`+name.transliteration.id+`</h5>
