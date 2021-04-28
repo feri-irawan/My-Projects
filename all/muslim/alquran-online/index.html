@@ -101,13 +101,18 @@ function getSurah() {
       `);
       
       $.each(verses, (i, verse) => {
-        var verseNumber = verse.number.inSurah;
+        var verseNumber = verse.number.inSurah,
+            // text
+            text = verse.text,
+            textArab = text.arab,
+            textLatin = text.transliteration.en,
+            textId = verse.translation.id;
         
         container.append(`
           <div class="ayat-container">
             <div class="row mb-3">
               <div class="col-3">`+verseNumber+`</div>
-              <div class="col-9"></div>
+              <div class="col-9 text-arab text-end">`+textArab+`</div>
             </div>
           </div>
         `)
