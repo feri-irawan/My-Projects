@@ -166,7 +166,9 @@ function getParam(param) {
 }
 function displayElement(target) {
   var target = document.querySelector(target);
-  target.style.display = "block";
+  for (i = 0; i <= target.length; i++) {
+  target[i].style.display = "block";
+  }
 }
 </script>
 </body>
