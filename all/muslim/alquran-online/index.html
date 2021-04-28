@@ -128,13 +128,13 @@ function getSurah() {
         
         container.append(`
           <div class="ayat-container">
-            <div class="row mb-3">
+            <div class="row">
               <div class="col-3">`+verseNumber+`</div>
               <div class="col-9 text-end"><h2 class="text-arab">`+textArab+`</h2></div>
             </div>
             <div class="p-3">
               <div class="text-muted textLatin">`+textLatin+`</div>
-              <div class="text-primary textId">`+textId+`</div>
+              <div class="text-primary textId mb-3">`+textId+`</div>
             </div>
           </div>
         `);
@@ -142,10 +142,10 @@ function getSurah() {
       
       // button display latin and translation
       $("#btn-display-latin").click(() => {
-        $(".textLatin").toggle()
+        $(".textLatin").toggle("fast", "linear")
       });
       $("#btn-display-translate").click(() => {
-        $(".textId").toggle()
+        $(".textId").toggle("fast", "linear")
       });
       
     },
