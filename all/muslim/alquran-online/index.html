@@ -157,11 +157,15 @@ function getParam(param) {
 
 // font size
 function btnFontSize(target, ukuran){
-  txt = document.getElementById(target);
+  txt = document.querySelector(target);
   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
   ukuranAwal = parseFloat(style);
   txt.style.fontSize = (ukuranAwal + ukuran) + 'px';
 }
+
+$(document).on("click", () => {
+  btnFontSize(".text-arab", "1")
+})
 </script>
 </body>
 </html>
