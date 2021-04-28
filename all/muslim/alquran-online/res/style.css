@@ -11,6 +11,9 @@
   font-family: "Qalam", Arial, Sans-Serif;
   font-size: 30px;
 }
+.textLatin, .textId {
+  display: none;
+}
 audio {
   height: 30px;
 }
