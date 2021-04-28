@@ -164,13 +164,6 @@ function increaseFontSize(target, increaseFactor){
      currentSize = parseFloat(style);
      txt.style.fontSize = (currentSize + increaseFactor) + 'px';
 }
-
-$("#font-size-plus").on("click", ".text-arab", () => {
-  increaseFactor(".text-arab", 1)
-})
-$("#font-size-minus").on("click", ".text-arab", () => {
-  increaseFactor(".text-arab", -1)
-})
 </script>
 </body>
 </html>
