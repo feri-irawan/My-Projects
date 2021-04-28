@@ -20,3 +20,6 @@ a {
 .card, .card-header {
   border: none;
 }
+.card-header {
+  background: #d3a0ff;
+}
