@@ -70,6 +70,7 @@ function getListSurah() {
       })
     },
     error: () => {
+      container.html(`<h3>Oops, jaringan Anda kurang bagus</h3>`)
       console.log("List Error!")
     }
   })
