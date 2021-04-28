@@ -137,7 +137,12 @@ function getSurah() {
           </div>
         `);
       });
-      
+      $("#btn-display-latin").click(() => {
+        displayElement(".textLatin")
+      });
+      $("#btn-display-translate").click(() => {
+        displayElement(".textId")
+      });
     },
     error: () => {
       console.log("Error surah!");
@@ -154,6 +159,10 @@ function checkParam(param) {
 function getParam(param) {
   let searchParams = new URLSearchParams(window.location.search);
   return searchParams.get(param);
+}
+function displayElement(target) {
+  var target = document.querySelector(target);
+  target.style.display = "block";
 }
 </script>
 </body>
