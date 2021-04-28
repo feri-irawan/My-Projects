@@ -154,6 +154,14 @@ function getParam(param) {
   let searchParams = new URLSearchParams(window.location.search);
   return searchParams.get(param);
 }
+
+// font size
+function increaseFontSize(target, ukuran){
+  txt = document.getElementById(target);
+  style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+  ukuranAwal = parseFloat(style);
+  txt.style.fontSize = (ukuranAwal + ukuran) + 'px';
+}
 </script>
 </body>
 </html>
