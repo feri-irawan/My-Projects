@@ -142,11 +142,12 @@ function getSurah() {
       
       // button display latin and translation
       $("#btn-display-latin").click(() => {
-        displayElement(".textLatin")
+        $(".textLatin").toggle()
       });
       $("#btn-display-translate").click(() => {
-        displayElement(".textId")
+        $(".textId").toggle()
       });
+      
     },
     error: () => {
       console.log("Error surah!");
@@ -163,12 +164,6 @@ function checkParam(param) {
 function getParam(param) {
   let searchParams = new URLSearchParams(window.location.search);
   return searchParams.get(param);
-}
-function displayElement(target) {
-  var target = document.querySelector(target);
-  for (i = 0; i <= target.length; i++) {
-  target[i].style.display = "block";
-  }
 }
 </script>
 </body>
