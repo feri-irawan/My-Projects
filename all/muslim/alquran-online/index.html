@@ -94,6 +94,8 @@ function getSurah() {
       
       // judul
       container.append(`
+        <button id="btn-display-latin">Latin</button>
+        <button id="btn-display-translate">Translate</button>
         <div class="text-center">
         <h3 class="text-arab">`+name.short+`</h3>
         <h5>`+name.transliteration.id+`</h5>
@@ -137,6 +139,8 @@ function getSurah() {
           </div>
         `);
       });
+      
+      // button display latin and translation
       $("#btn-display-latin").click(() => {
         displayElement(".textLatin")
       });
