@@ -17,3 +17,6 @@ audio {
 a {
   text-decoration: none;
 }
+.card, .card-header {
+  border: none;
+}
