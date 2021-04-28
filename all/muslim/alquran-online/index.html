@@ -26,13 +26,14 @@
 var   container = $("#quran");
 const host      = "https://api.quran.sutanlab.id",
       listSurah = "/surah",
-      surah     = getUrlParam("surah"),
-      ayat      = getUrlParam("ayat");
+      isiSurah  = "?surah=",
+      noSurah     = getParam("surah"),
+      ayat      = getParam("ayat");
       
-if (!typeof surah) {
-  getListSurah();
+if (checkParam("surah") === true) {
+  getSurah()
 } else {
-  console.log("No Surah")
+  getListSurah()
 }
 
 
@@ -74,6 +75,23 @@ function getListSurah() {
   })
 }
 
+// get surah
+function getSurah() {
+  $.ajax({
+    url: host + listSurah + isiSurah + noSurah,
+    typeData: "json",
+    success: (hasil) => {
+      console.log("Success surah!");
+      console.log(hasil);
+    },
+    error: () => {
+      console.log("Error surah!");
+    }
+  });
+}
+
+
+// get and check url params
 function checkParam(param) {
   let searchParams = new URLSearchParams(window.location.search);
   return searchParams.has(param);
