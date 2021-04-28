@@ -127,8 +127,7 @@ function getSurah() {
             textId = verse.translation.id;
         
         container.append(`
-          <div class="ayat-container">
-            <div class="row">
+            <div class="row bg-warning">
               <div class="col-3">`+verseNumber+`</div>
               <div class="col-9 text-end bg-danger"><h2 class="text-arab">`+textArab+`</h2></div>
             </div>
@@ -136,7 +135,6 @@ function getSurah() {
               <div class="text-muted textLatin">`+textLatin+`</div>
               <div class="text-primary textId mb-3">`+textId+`</div>
             </div>
-          </div>
         `);
       });
       
