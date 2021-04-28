@@ -18,5 +18,9 @@
     {
         "name": "Jadwal Sholat",
         "url": "all/muslim/jadwal-sholat"
+    },
+    {
+        "name": "Alquran Online",
+        "url": "all/muslim/alquran-online"
     }
 ]
