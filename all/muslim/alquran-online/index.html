@@ -13,6 +13,8 @@
 
 
 <div class="container p-3">
+  <button id="font-size-plus">T+</button>
+  <button id="font-size-minus">T-</button>
   <div class="row" id="quran"></div>
 </div>
 
@@ -156,19 +158,20 @@ function getParam(param) {
 }
 
 // font size
-function btnFontSize(target, ukuran){
-  txt = document.querySelector(target);
-  style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-  ukuranAwal = parseFloat(style);
-  txt.style.fontSize = (ukuranAwal + ukuran) + 'px';
+function increaseFontSize(target, increaseFactor){
+     txt = document.querySelector(target);
+     style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+     currentSize = parseFloat(style);
+     txt.style.fontSize = (currentSize + increaseFactor) + 'px';
 }
-
-$("#font-size-plus").on("click", () => {
-  btnFontSize(".text-arab", 1)
-})
-$("#font-size-minus").on("click", () => {
-  btnFontSize(".text-arab", -1)
-})
+function fontSize() {
+  $("#font-size-plus").on("click", () => {
+    increaseFactor(".text-arab", 1)
+  })
+  $("#font-size-minus").on("click", () => {
+    increaseFactor(".text-arab", -1)
+  })
+}
 </script>
 </body>
 </html>
