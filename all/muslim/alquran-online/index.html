@@ -13,8 +13,6 @@
 
 
 <div class="container p-3">
-  <button id="plustext">T+</button>
-  <button id="minustext">T-</button>
   <div class="row" id="quran"></div>
 </div>
 
@@ -139,9 +137,6 @@ function getSurah() {
         `);
       });
       
-      $("#plustext").click(() => {resizeText("body", 1);});
-      $("#minustext").click(() => {resizeText("body", -1);});
-
     },
     error: () => {
       console.log("Error surah!");
@@ -158,15 +153,6 @@ function checkParam(param) {
 function getParam(param) {
   let searchParams = new URLSearchParams(window.location.search);
   return searchParams.get(param);
-}
-
-// font size
-function resizeText(selector, size) {
-  var target = document.querySelector(selector);
-  if (target.style.fontSize == "") {
-    target.style.fontSize = "1.0em";
-  }
-  target.style.fontSize = parseFloat(target.style.fontSize) + (size * 0.2) + "em";
 }
 </script>
 </body>
