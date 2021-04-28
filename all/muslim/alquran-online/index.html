@@ -163,8 +163,11 @@ function btnFontSize(target, ukuran){
   txt.style.fontSize = (ukuranAwal + ukuran) + 'px';
 }
 
-$(document).on("click", () => {
-  btnFontSize(".text-arab", "1")
+$("#font-size-plus").on("click", () => {
+  btnFontSize(".text-arab", 1)
+})
+$("#font-size-minus").on("click", () => {
+  btnFontSize(".text-arab", -1)
 })
 </script>
 </body>
