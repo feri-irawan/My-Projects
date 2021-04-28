@@ -25,7 +25,7 @@
 <script>
 var   container = $("#quran");
 const host      = "https://api.quran.sutanlab.id",
-      listSurah = "/surah",
+      listSurah = "/surah/",
       isiSurah  = "?surah=",
       noSurah     = getParam("surah"),
       ayat      = getParam("ayat");
@@ -76,13 +76,42 @@ function getListSurah() {
 }
 
 // get surah
+console.log(host + listSurah + noSurah);
+
 function getSurah() {
   $.ajax({
-    url: host + listSurah + isiSurah + noSurah,
+    url: host + listSurah + noSurah,
     typeData: "json",
     success: (hasil) => {
       console.log("Success surah!");
       console.log(hasil);
+      
+      var surah = hasil.data,
+          name  = surah.name,
+          relevation = surah.relevation,
+          tafsir = surah.tafsir.id,
+          verses = surah.verses;
+      
+      container.append(`
+        <div class="text-center">
+        <h3 class="text-arab">`+name.short+`</h3>
+        <h5>`+name.transliteration.id+`</h5>
+        <h6>`+name.translation.id+`</h6>
+        </div>
+      `);
+      
+      $.each(verses, (i, verse) => {
+        var verseNumber = verse.number.inSurah;
+        
+        container.append(`
+          <div class="ayat-container">
+            <div class="row mb-3">
+              <div class="col-3">`+verseNumber+`</div>
+              <div class="col-9"></div>
+            </div>
+          </div>
+        `)
+      })
     },
     error: () => {
       console.log("Error surah!");
