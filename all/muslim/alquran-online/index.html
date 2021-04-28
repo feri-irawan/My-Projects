@@ -29,13 +29,13 @@ const host      = "https://api.quran.sutanlab.id",
       isiSurah  = "?surah=",
       noSurah   = getParam("surah"),
       ayat      = getParam("ayat");
-      
+
+
 if (checkParam("surah") === true) {
   getSurah()
 } else {
   getListSurah()
 }
-
 
 // get list surat
 function getListSurah() {
