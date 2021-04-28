@@ -27,7 +27,7 @@ var   container = $("#quran");
 const host      = "https://api.quran.sutanlab.id",
       listSurah = "/surah/",
       isiSurah  = "?surah=",
-      noSurah     = getParam("surah"),
+      noSurah   = getParam("surah"),
       ayat      = getParam("ayat");
       
 if (checkParam("surah") === true) {
@@ -76,8 +76,6 @@ function getListSurah() {
 }
 
 // get surah
-console.log(host + listSurah + noSurah);
-
 function getSurah() {
   $.ajax({
     url: host + listSurah + noSurah,
