@@ -70,9 +70,6 @@ function getListSurah() {
         </div>
         `)
       })
-      
-      // font size
-      fontSize()
     },
     error: () => {
       console.log("List Error!")
@@ -142,8 +139,6 @@ function getSurah() {
         `)
       })
       
-      // font size
-      fontSize();
     },
     error: () => {
       console.log("Error surah!");
@@ -169,14 +164,13 @@ function increaseFontSize(target, increaseFactor){
      currentSize = parseFloat(style);
      txt.style.fontSize = (currentSize + increaseFactor) + 'px';
 }
-function fontSize() {
-  $("#font-size-plus").on("click", () => {
-    increaseFactor(".text-arab", 1)
-  })
-  $("#font-size-minus").on("click", () => {
-    increaseFactor(".text-arab", -1)
-  })
-}
+
+$("#font-size-plus").on("click", ".text-arab", () => {
+  increaseFactor(".text-arab", 1)
+})
+$("#font-size-minus").on("click", ".text-arab", () => {
+  increaseFactor(".text-arab", -1)
+})
 </script>
 </body>
 </html>
