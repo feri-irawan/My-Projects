@@ -136,9 +136,12 @@ function getSurah() {
               <div class="text-primary">`+textId+`</div>
             </div>
           </div>
-        `)
-      })
+        `);
+      });
       
+      $("#plustext").click(() => {resizeText("body", 1);});
+      $("#minustext").click(() => {resizeText("body", -1);});
+
     },
     error: () => {
       console.log("Error surah!");
@@ -158,9 +161,6 @@ function getParam(param) {
 }
 
 // font size
-$("#plustext").click(() => {resizeText("body", 1);});
-$("#minustext").click(() => {resizeText("body", -1);});
-
 function resizeText(selector, size) {
   var target = document.querySelector(selector);
   if (target.style.fontSize == "") {
