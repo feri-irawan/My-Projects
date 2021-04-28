@@ -23,64 +23,65 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
+var   container = $("#quran");
 const host      = "https://api.quran.sutanlab.id",
       listSurah = "/surah",
       surah     = getUrlParam("surah"),
       ayat      = getUrlParam("ayat");
       
-var container = $("#quran");
+if (!typeof surah) {
+  getListSurah();
+} else {
+  console.log("No Surah")
+}
+
 
 // get list surat
-$.ajax({
-  url: host + listSurah,
-  typeData: "json",
-  success: (hasil) => {
-    console.log("List Success!")
-    console.log(hasil)
-    $.each(hasil.data, (i, list) => {
-      var name = list.name;
-      container.append(`
-      <div class="col-md-6">
-        <a href="?surah=`+list.number+`">
-          <div class="card mb-3">
-            <div class="card-header">
-            <small>Surah: `+list.number+`, Ayat: `+list.numberOfVerses+`</small>
-            </div>
-            <div class="card-body">
-              <div class="row align-items-center">
-                <div class="col-6">
-                  <h5>`+name.transliteration.id+`</h5>
-                  <small class="text-muted">`+name.translation.id+`</small>
+function getListSurah() {
+  $.ajax({
+    url: host + listSurah,
+    typeData: "json",
+    success: (hasil) => {
+      console.log("List Success!")
+      console.log(hasil)
+      $.each(hasil.data, (i, list) => {
+        var name = list.name;
+        container.append(`
+        <div class="col-md-6">
+          <a href="?surah=`+list.number+`">
+            <div class="card mb-3">
+              <div class="card-header">
+              <small>Surah: `+list.number+`, Ayat: `+list.numberOfVerses+`</small>
+              </div>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-6">
+                    <h5>`+name.transliteration.id+`</h5>
+                    <small class="text-muted">`+name.translation.id+`</small>
+                  </div>
+                  <div class="col-6 text-end text-arab"><h1>`+name.short+`</h1></div>
                 </div>
-                <div class="col-6 text-end text-arab"><h1>`+name.short+`</h1></div>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
-      `)
-    })
-  },
-  error: () => {
-    console.log("List Error!")
-  }
-})
+          </a>
+        </div>
+        `)
+      })
+    },
+    error: () => {
+      console.log("List Error!")
+    }
+  })
+}
 
-// Get Params
-function getUrlParam(sParam) {
-  var sPageURL = window.location.search.substring(1),
-      sURLVariables = sPageURL.split('&'),
-      sParameterName,
-      i;
-  
-  for (i = 0; i < sURLVariables.length; i++) {
-      sParameterName = sURLVariables[i].split('=');
-  
-      if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-      }
-  }
-};
+function checkParam(param) {
+  let searchParams = new URLSearchParams(window.location.search);
+  return searchParams.has(param);
+}
+function getParam(param) {
+  let searchParams = new URLSearchParams(window.location.search);
+  return searchParams.get(param);
+}
 </script>
 </body>
 </html>
