@@ -91,25 +91,30 @@ function getSurah() {
           tafsir = surah.tafsir.id,
           verses = surah.verses;
       
-      if (preBismillah !== null) {
-        var bismillahArab = preBismillah.text.arab,
-            bismillahLatin = preBismillah.text.transliteration.en,
-            bismillahId = preBismillah.translation.id;
-      }
-      
+      // judul
       container.append(`
         <div class="text-center">
         <h3 class="text-arab">`+name.short+`</h3>
         <h5>`+name.transliteration.id+`</h5>
         <h6>`+name.translation.id+`</h6>
-        <div class="bismillah">
-          <h2 class="text-arab">`+bismillahArab+`</h2>
-          <div class="text-muted">`+bismillahLatin+`</div>
-          <div class="text-primary">`+bismillahId+`</div>
-        </div>
         </div>
       `);
       
+      // bismillah
+      if (preBismillah !== null) {
+        var bismillahArab = preBismillah.text.arab,
+            bismillahLatin = preBismillah.text.transliteration.en,
+            bismillahId = preBismillah.translation.id;
+        container.append(`
+          <div class="bismillah">
+            <h2 class="text-arab">`+bismillahArab+`</h2>
+            <div class="text-muted">`+bismillahLatin+`</div>
+            <div class="text-primary">`+bismillahId+`</div>
+          </div>
+        `)
+      }
+      
+      // ayat-ayat
       $.each(verses, (i, verse) => {
         var verseNumber = verse.number.inSurah,
             // text
@@ -131,6 +136,7 @@ function getSurah() {
           </div>
         `)
       })
+      
     },
     error: () => {
       console.log("Error surah!");
