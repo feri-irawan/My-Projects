@@ -161,10 +161,12 @@ function getSurah() {
       
       // button display latin and translation
       $("#btn-display-latin").click(() => {
-        $(".textLatin").toggle("fast", "linear")
+        $(".textLatin").toggle("fast", "linear");
+        $(this).txt("Sembunyikan Latin");
       });
       $("#btn-display-translate").click(() => {
         $(".textId").toggle("fast", "linear")
+        $(this).txt("Sembunyikan Terjemahan");
       });
       
     },
