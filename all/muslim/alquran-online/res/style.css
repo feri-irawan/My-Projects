@@ -10,7 +10,7 @@
 .text-arab {
   font-family: "Qalam", Arial, Sans-Serif;
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 3rem;
 }
 .textLatin, .textId {
   display: none;
