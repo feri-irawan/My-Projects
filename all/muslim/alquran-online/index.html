@@ -75,15 +75,18 @@ function getListSurah() {
           <a href="?surah=`+list.number+`">
             <div class="card mb-3 shadow">
               <div class="card-header">
-              <small>`+list.number+` | `+list.revelation.id+` | `+list.numberOfVerses+` Ayat</small>
+              <small>`+list.revelation.id+` | `+list.numberOfVerses+` Ayat</small>
               </div>
               <div class="card-body">
                 <div class="row align-items-center">
+                  <div class="col-1">
+                  <small class="ayat">`+list.number+`</small>
+                  </div>
                   <div class="col-6">
                     <h6>`+name.transliteration.id+`</h6>
                     <small class="text-muted">`+name.translation.id+`</small>
                   </div>
-                  <div class="col-6 text-end text-arab"><h1>`+name.short+`</h1></div>
+                  <div class="col-5 text-end text-arab"><h1>`+name.short+`</h1></div>
                 </div>
               </div>
             </div>
