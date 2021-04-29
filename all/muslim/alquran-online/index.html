@@ -162,12 +162,12 @@ function getSurah() {
       // button display latin and translation
       $("#btn-display-latin").click(function () {
         $(".textLatin").toggle("fast", "linear");
-        $(this).html("Sembunyikan Latin");
+        $(this).text($(this).text() == 'Tampilkan Latin' ? 'Sembunyikan Latin' : 'Tampilkan Latin');
       });
       
       $("#btn-display-translate").click(function () {
         $(".textId").toggle("fast", "linear");
-        $(this).html("Sembunyikan Terjemahan");
+        $(this).text($(this).text() == 'Tampilkan Terjemahan' ? 'Sembunyikan Terjemahan' : 'Tampilkan Terjemahan');
       });
       
     },
