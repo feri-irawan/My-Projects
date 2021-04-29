@@ -46,9 +46,9 @@
 <script>
 var   container = $("#quran");
 const host      = "https://api.quran.sutanlab.id",
-      listSurah = "/surah/",
+      listSurah = "/surah",
       isiSurah  = "?surah=",
-      noSurah   = getParam("surah"),
+      noSurah   = "/" + getParam("surah"),
       ayat      = getParam("ayat");
 
 
