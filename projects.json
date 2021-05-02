@@ -22,5 +22,10 @@
     {
         "name": "Alquran Online",
         "url": "all/muslim/alquran-online"
-    }
+    },
+    {
+        "name": "YouTube",
+        "url": "all/youtube"
+    },
+
 ]
