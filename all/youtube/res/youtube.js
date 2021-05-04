@@ -32,17 +32,24 @@ function YTsearch(keyword) {
       
       $.each(hasil.items, (i, search) => {
         var videoId = search.id.videoId,
+            kind = search.id.kind, 
             snippet = search.snippet,
             thumbnail = snippet.thumbnails.medium.url,
             title = snippet.title,
             description = snippet.description,
             publishedAt = snippet.publishedAt,
             channelTitle = snippet.channelTitle;
+          
+        if (kind == "youtube#channel") {
+            thumbnail = `<img src="`+thumbnail+`" class="card-img-top">`
+        } else {
+          thumbnail = `<iframe src="https://www.youtube.com/embed/`+videoId+`" class="card-img-top"></iframe>`;
+        }
             
         container.append(`
         <div class="col-md-6">
           <div class="card mb-3">
-            <img src="`+thumbnail+`" class="card-img-top">
+            `+thumbnail+`
             <div class="card-body">
               <h5 class="card-title">`+title+`</h5>
               <span class="badge bg-primary">`+channelTitle+`</span>
