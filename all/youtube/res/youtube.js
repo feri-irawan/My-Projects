@@ -41,9 +41,9 @@ function YTsearch(keyword) {
             channelTitle = snippet.channelTitle;
           
         if (kind == "youtube#channel") {
-            thumbnail = `<img src="`+thumbnail+`" class="card-img-top">`;
+            thumbnail = `<img src="`+thumbnail+`" class="card-img-top" loading="lazy">`;
         } else {
-          thumbnail = `<iframe src="https://www.youtube.com/embed/`+videoId+`" class="card-img-top"></iframe>`;
+          thumbnail = `<iframe src="https://www.youtube.com/embed/`+videoId+`" class="card-img-top" loading="lazy"></iframe>`;
         }
             
         container.append(`
