@@ -8,11 +8,13 @@ $("#input-search").on("keyup", function() {
   YTsearch(keyword)
 });
 
-$("#form-search").bind("submit", function() {
+$("#form-search").bind("submit", function(e) {
   var keyword = $("#input-search").val();
   
   container.html("<center>Loading...</center>")
-  YTsearch(keyword)
+  YTsearch(keyword);
+  
+  e.preventDefault();
 });
 
 function YTsearch(keyword) {
