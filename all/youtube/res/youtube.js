@@ -41,7 +41,7 @@ function YTsearch(keyword) {
             channelTitle = snippet.channelTitle;
           
         if (kind == "youtube#channel") {
-            thumbnail = `<img src="`+thumbnail+`" class="card-img-top">`
+            thumbnail = `<img src="`+thumbnail+`" class="card-img-top">`;
         } else {
           thumbnail = `<iframe src="https://www.youtube.com/embed/`+videoId+`" class="card-img-top"></iframe>`;
         }
@@ -71,3 +71,4 @@ function dateFormat(date) {
   var date = new Date(date);
   return ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear()
 }
+!
