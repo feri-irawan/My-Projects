@@ -25,7 +25,7 @@ a {
   border: none;
 }
 .card-header {
-  background: #d3a0ff;
+  background: var(--bs-primary);
   color: #fff;
 }
 .verse-container {
