@@ -33,6 +33,7 @@ a {
 }
 .verse-box {
   padding: 10px 0px;
+  text-align: center;
   width: 40px;
   background: #fff;
   white-space: nowrap;
