@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Qalam';
-  src: url('../../fonts/AlQalamQuran.woff2') format('woff2'),
-       url('../../fonts/AlQalamQuran.woff') format('woff');
+  src: url('https://my-projects.vercel.app/all/muslim/fonts/AlQalamQuran.woff2') format('woff2'),
+       url('https://my-projects.vercel.app/all/muslim/fonts/AlQalamQuran.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
