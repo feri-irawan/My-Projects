@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-hello-world",
+  "name": "belajar-nodejs",
   "version": "1.0.0",
   "description": "Hello World sample app",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/feri-irawan/My-Projects/NodeJs.git"
   },
-  "author": "fhinkel",
+  "author": "feri-irawan",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/feri-irawan/My-Projects/NodeJs/issue"
